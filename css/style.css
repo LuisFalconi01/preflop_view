@@ -1,0 +1,337 @@
+/* =========================
+   BASE
+========================= */
+
+body {
+    margin: 0;
+    color: #222;
+    font-family: "Montserrat", "Century Gothic", Arial, sans-serif;
+
+    /* Fondo */
+/*    background-image: url("../images/backgrounds.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #33313c; */
+
+    background: radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #e5e7eb 100%
+    );
+
+
+}
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.side {
+    width: 140px;
+    padding: 8px;
+}
+
+/* Segunda columna derecha */
+.side.secondary {
+    width: 160px;
+    padding: 8px;
+    border-left: 1px solid #e5e7eb;
+}
+
+/* =========================
+   CENTRO
+========================= */
+
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    margin-bottom: 8px;
+}
+
+.center img {
+    width: 600px;
+    max-width: 100%;
+    border: 2px solid #cbd5e1;
+    background: #f9f9f9;
+}
+
+
+/* =========================
+   SECCIONES Y TÍTULOS
+========================= */
+
+
+.section {
+    margin-bottom: 10px;
+}
+
+/* Títulos generales */
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Títulos rojos (BB GAME, 3BET, etc) */
+.title.red {
+    color: #9b1c1c;
+}
+
+/* Títulos rojos (BB GAME, 3BET, etc) */
+.title.orange {
+    color: #0c7497;
+}
+
+/* Caja de títulos grandes */
+.title-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.title-box .title {
+    padding: 6px 14px;
+    border: 2px solid #9b1c1c;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.9);
+    font-size: 13px;
+}
+
+/* EARLY / MIDDLE / etc */
+.title.stage {
+    background-color: #dbeef7;
+    color: #1f3a4a;
+    border: 1px solid #a7cde3;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    background: #C7D2D6;
+    color: #334155;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+
+.btn:hover {
+    background: #2eb8e2;
+}
+
+/* Botón seleccionado */
+.btn.active {
+    background-color: #2bb7e2;
+    border-color: #2bb7e2;
+    color: #123a52;
+    font-weight: bold;
+}
+
+/* =========================
+   (YA NO USAMOS PARTE INFERIOR)
+========================= */
+/* Se elimina .bottom porque ahora todo está en columnas */
+
+
+/* Contenedor del tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Texto del popup (oculto por defecto) */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Aparece arriba del texto */
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Mostrar al pasar el mouse */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+/* ... (Mantén tu CSS base) ... */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Ajustes para que los botones quepan en cuadrícula */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin-bottom: 5px;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.flex-row .btn {
+    width: auto;
+    min-width: 80px;
+}
+
+/* Colores específicos de la imagen */
+.title.blue {
+    background-color: #dbeef7;
+    border: 2px solid #2bb7e2;
+    color: #123a52;
+}
+
+/* Colores específicos de la imagen */
+.title.orange {
+    background-color: #dbeef7;
+    border: 2px solid #2bb7e2;
+    color: #123a52;
+}
+
+.txt-red {
+    color: red;
+    font-weight: bold;
+}
+
+/* Ajuste de la imagen central para que no sea gigante */
+#preflopImage {
+
+    width: 500px;
+    max-width: 100%;
+    border: 2px solid black;
+    background: #f9f9f9;
+}
+
+.bottom-area {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Tooltip mejorado */
+.tooltiptext {
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+.navigation-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.btn-nav, .btn-close {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: background 0.3s;
+}
+
+/* Estilo Regresar (Gris oscuro) */
+.btn-nav {
+    background-color: #4b5563;
+    color: white;
+}
+
+.btn-nav:hover {
+    background-color: #374151;
+}
+
+/* Estilo Cerrar (Rojo fuerte) */
+.btn-close {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btn-close:hover {
+    background-color: #b91c1c;
+}
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-btn {
+
+    width: 26px;
+    height: 26px;
+
+    background: #2bb7e2;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.slider-btn:hover {
+    background: #1c9bc2;
+}
+
+.slider-btn.hidden {
+    visibility: hidden;
+}
