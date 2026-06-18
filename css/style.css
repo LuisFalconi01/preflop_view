@@ -336,6 +336,7 @@ body {
     visibility: hidden;
 }
 
+
 /* ===================================
    MODO MOVIL / ANDROID
 =================================== */
@@ -420,4 +421,38 @@ body {
         font-size: 14px;
     }
 
+}
+
+
+/* =========================
+   ACORDEON
+========================= */
+
+.accordion {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    cursor: pointer;
+}
+
+.accordion-icon {
+    float: right;
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 0.3s ease;
+}
+
+/* Cerrado */
+.accordion.closed .accordion-content {
+    max-height: 0;
+}
+
+.accordion.closed .accordion-icon {
+    transform: rotate(-90deg);
 }

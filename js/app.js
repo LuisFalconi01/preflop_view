@@ -75,3 +75,32 @@ nextBtn.addEventListener("click", () => {
 });
 
 showImage(0);
+
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+
+    header.addEventListener('click', () => {
+
+        const accordion = header.parentElement;
+        accordion.classList.toggle('closed');
+
+        const icon = header.querySelector('.accordion-icon');
+
+        if (accordion.classList.contains('closed')) {
+            icon.textContent = '▼';
+        } else {
+            icon.textContent = '▲';
+        }
+
+    });
+
+});
+
+
+if (window.innerWidth <= 768) {
+
+    document.querySelectorAll('.accordion').forEach(acc => {
+        acc.classList.add('closed');
+    });
+
+}
