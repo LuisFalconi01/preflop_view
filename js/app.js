@@ -3,7 +3,7 @@ const image = document.getElementById("preflopImage");
 const prevBtn = document.getElementById("prevSlide");
 const nextBtn = document.getElementById("nextSlide");
 
-let currentImages = ["or_ep.png"];
+let currentImages = ["mp_vs_ep.png"];
 let currentIndex = 0;
 
 function showImage(index) {
@@ -102,5 +102,61 @@ if (window.innerWidth <= 768) {
     document.querySelectorAll('.accordion').forEach(acc => {
         acc.classList.add('closed');
     });
+
+}
+
+
+/* =========================
+   RNG
+========================= */
+
+const numberElement = document.getElementById("number");
+const countdownElement = document.getElementById("countdown");
+
+if(numberElement){
+
+    let countdown = 3;
+
+    function generateNumber(){
+
+        let interval = setInterval(() => {
+
+            const temp = (Math.random() * 99 + 1).toFixed(0);
+
+            numberElement.textContent = temp;
+
+        }, 40);
+
+        setTimeout(() => {
+
+            clearInterval(interval);
+
+            const finalNumber = (Math.random() * 99 + 1).toFixed(0);
+
+            numberElement.textContent = finalNumber;
+
+        }, 700);
+
+        countdown = 3;
+
+        countdownElement.textContent = countdown;
+    }
+
+    window.generateNumber = generateNumber;
+
+    generateNumber();
+
+    setInterval(() => {
+
+        countdown--;
+
+        countdownElement.textContent = countdown;
+
+        if(countdown <= 0){
+
+            generateNumber();
+        }
+
+    }, 1000);
 
 }
